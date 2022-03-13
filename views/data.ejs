@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<div class="col-md-4 col-md-offset-4">
+		<div>
+			<p>Contacts</p>
+		</div>
+		<div>
+			<center>
+				<table class="table table-hover text-center">
+					<tr><td>Name </td><td>Email </td><td>Number </td></tr>
+					
+					<% results.map((result)=>{ %>
+						<tr>
+						<td><%= result.name %></td>
+						<td><%= result.number %></td>
+						<td><%= result.email %></td>
+					</tr>
+					  <% }) %>
+
+				
+				</table>
+			</center>
+		</div>
+		<div><a href="/contacts">Add Contact</a>
+			<br/><br/>
+		<div class="abc">
+			<a href="/logout">Logout</a>
+		</div>
+	</div>
+</body>
+</html>
